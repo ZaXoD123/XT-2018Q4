@@ -7,7 +7,7 @@ namespace Epam.Task1.Simple
         static bool SimpleFunc(int n)
         {
             if (n < 1) throw new Exception("This number is wrong");
-            for (int i = 2; i <= Math.Sqrt(Math.Abs(n)); i++)
+            for (int i = 2; i <= Math.Sqrt(n); i++)
             {
                 if (n % i == 0) return false;
             }
