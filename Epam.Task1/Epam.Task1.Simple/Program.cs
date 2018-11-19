@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Specialized;
 
 namespace Epam.Task1.Simple
 {
@@ -11,7 +6,8 @@ namespace Epam.Task1.Simple
     {
         static bool SimpleFunc(int n)
         {
-            for (int i = 2; i <= Math.Sqrt(n); i++)
+            if (n < 1) throw new Exception("This number is wrong");
+            for (int i = 2; i <= Math.Sqrt(Math.Abs(n)); i++)
             {
                 if (n % i == 0) return false;
             }
@@ -20,8 +16,9 @@ namespace Epam.Task1.Simple
 
         static void Main(string[] args)
         {
-            var n = int.Parse(Console.ReadLine());
-            Console.WriteLine(SimpleFunc(n));
+            Console.Write("Enter a positive integer [1+]: ");
+            int.TryParse(Console.ReadLine(), out int n);
+            Console.WriteLine($"Is this simple: {SimpleFunc(n)}");
         }
     }
 }

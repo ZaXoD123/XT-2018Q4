@@ -1,22 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.Task1.Sequence
 {
     class Program
     {
-        public static string SequenceFunction(int n)
+        public static void SequenceFunction(int n)
         {
-            return String.Join(", ",Enumerable.Range(1, n).ToArray()); 
+            if (n < 1) throw new Exception("This number is wrong");
+            //Console.WriteLine(String.Join(", ",Enumerable.Range(1, n).ToArray()));
+            for (int i = 1; i < n; i++)
+            {
+                Console.Write($"{i}, ");
+            }
+            Console.WriteLine(n); 
         }
 
         static void Main()
-        {
-            var n = int.Parse(Console.ReadLine());
-            Console.WriteLine(SequenceFunction(n));
+        { 
+            Console.Write("Enter a positive integer [1+]: ");
+            int.TryParse(Console.ReadLine(), out int n);
+            SequenceFunction(n);
         }
     }
 }
