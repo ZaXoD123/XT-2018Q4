@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BE67DDA-A10D-439D-9736-C7F7C8B3CE31}</ProjectGuid>
+    <ProjectGuid>{F0A0D08F-B0C1-4928-B5AA-9FAF3AF22840}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CharDoubler</RootNamespace>
-    <AssemblyName>CharDoubler</AssemblyName>
+    <RootNamespace>Epam.Task2.CharDoubler</RootNamespace>
+    <AssemblyName>Epam.Task2.CharDoubler</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

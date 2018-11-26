@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("CharDoubler")]
+[assembly: AssemblyTitle("Epam.Task2.CharDoubler")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CharDoubler")]
+[assembly: AssemblyProduct("Epam.Task2.CharDoubler")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("2be67dda-a10d-439d-9736-c7f7c8b3ce31")]
+[assembly: Guid("f0a0d08f-b0c1-4928-b5aa-9faf3af22840")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
