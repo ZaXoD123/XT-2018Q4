@@ -15,7 +15,7 @@ namespace Epam.Task1.Square
             for (int i = 1; i <= n; i++)
             {
                 string a = new string('*', n / 2);
-                char b = i == (n / 2 + 1) ? ' ' : '*';
+                char b = (i == (n / 2 + 1)) ? ' ' : '*';
                 string c = new string('*', n / 2);
                 Console.WriteLine($"{a}{b}{c}");
             }
@@ -23,9 +23,19 @@ namespace Epam.Task1.Square
 
         public static void Main(string[] args)
         {
-            Console.Write("Enter a positive uneven integer [1+]: ");
+        start:
+            Console.WriteLine("Enter a positive integer [1+]: ");
             int.TryParse(Console.ReadLine(), out int n);
-            Square(n);
+            Console.Clear();
+            try
+            {
+                Square(n);
+            }
+            catch (Exception currentException)
+            {
+                Console.WriteLine($"FAIL! {currentException.Message}{Environment.NewLine}Try again:");
+                goto start;
+            }
         }
     }
 }

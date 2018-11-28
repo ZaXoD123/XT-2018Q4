@@ -24,9 +24,19 @@ namespace Epam.Task1.Simple
 
         public static void Main(string[] args)
         {
-            Console.Write("Enter a positive integer [1+]: ");
+        start:
+            Console.WriteLine("Enter a positive integer [1+]: ");
             int.TryParse(Console.ReadLine(), out int n);
-            Console.WriteLine($"Is this simple: {SimpleFunc(n)}");
+            Console.Clear();
+            try
+            {
+                 Console.WriteLine($"Is this simple: {SimpleFunc(n)}");
+            }
+            catch (Exception currentException)
+            {
+                Console.WriteLine($"FAIL! {currentException.Message}{Environment.NewLine}Try again:");
+                goto start;
+            }
         }
     }
 }
