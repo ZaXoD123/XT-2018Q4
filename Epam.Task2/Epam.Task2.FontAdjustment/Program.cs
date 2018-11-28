@@ -2,17 +2,17 @@
 
 namespace Epam.Task2.FontAdjustment
 {
-    class Program
+    public class Program
     {
         [Flags]
-        enum FontProperties : int
+        public enum FontProperties : int
         {
             bold = 1,
             italic,
             underline = 4
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int properties = 0;
             while (true)
@@ -26,13 +26,13 @@ namespace Epam.Task2.FontAdjustment
                 {
                     foreach (FontProperties item in Enum.GetValues(typeof(FontProperties)))
                     {
-                        Console.Write(((properties & (int)item) != 0) ? (item & (FontProperties)properties).ToString() + ", " : "");
+                        Console.Write(((properties & (int)item) != 0) ? (item & (FontProperties)properties).ToString() + ", " : string.Empty);
                     }
                 }
-                Console.WriteLine("{0}Введите: {0}{1}{0}{2}{0}{3}",Environment.NewLine,"       1: " + FontProperties.bold, "       2: " + FontProperties.italic, "       3: " + FontProperties.underline);
+
+                Console.WriteLine("{0}Введите: {0}{1}{0}{2}{0}{3}", Environment.NewLine, "       1: " + FontProperties.bold, "       2: " + FontProperties.italic, "       3: " + FontProperties.underline);
                 properties = properties ^ (int)Math.Pow(2, int.Parse(Console.ReadLine()) - 1);
             }
-
         }
     }
 }

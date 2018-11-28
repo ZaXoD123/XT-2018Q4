@@ -3,10 +3,9 @@ using System.Linq;
 
 namespace Epam.Task2.NonNegativeSum
 {
-    class Program
+    public class Program
     {
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Enter rank of massive: ");
             var generator = new Random();
@@ -18,7 +17,8 @@ namespace Epam.Task2.NonNegativeSum
                 array[i] = generator.Next(1000) - 500;
                 Console.Write($"{array[i]} ");
             }
-            Console.WriteLine(Environment.NewLine + array.Where(x=>x>0).Sum());
+
+            Console.WriteLine(Environment.NewLine + array.Where(x => x > 0).Sum());
         }
     }
 }

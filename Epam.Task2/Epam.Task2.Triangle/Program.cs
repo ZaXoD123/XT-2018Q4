@@ -3,12 +3,14 @@ using System.Linq;
 
 namespace Epam.Task2.XmasTree
 {
-    class Program
+    public class Program
     {
-        static void TriangleShow(int n)
+        public static void TriangleShow(int n)
         {
-            if (n <= 0) throw new Exception("Wrong values!");
-            //Enumerable.Range(1, n).ToList().ForEach(i=>Console.WriteLine(new string('*',i))); 
+            if (n <= 0)
+            {
+                throw new Exception("Wrong values!");
+            }
             
             for (int number = 1; number <= n; number++)
             {
@@ -16,10 +18,12 @@ namespace Epam.Task2.XmasTree
                 {
                     Console.Write('*');
                 }
+
                 Console.Write(Environment.NewLine);
             }
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
         start:
             Console.WriteLine("Enter count of lines:");

@@ -3,22 +3,27 @@ using System.Linq;
 
 namespace Epam.Task2.AnotherTriangle
 {
-    class Program
+    public class Program
     {
-        static void AnotherTriangleShow(int n)
+        public static void AnotherTriangleShow(int n)
         {
-            if (n <= 0) throw new Exception("Wrong values!");
-            //Enumerable.Range(1, n).ToList().ForEach(i => Console.WriteLine(new string(' ',n-i) + new string('*',2*i-1)));
+            if (n <= 0)
+            {
+                throw new Exception("Wrong values!");
+            }
+            
             for (int number = 1; number <= n; number++)
             {
-                for (int i = 0; i < (n - number) + (2 * number - 1); i++)
+                for (int i = 0; i < ((n - number) + (2 * number - 1)); i++)
                 {
                     Console.Write((i < (n - number)) ? ' ' : '*');
                 }
+
                 Console.Write(Environment.NewLine);
             }
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
         start:
             Console.WriteLine("Enter count of lines:");

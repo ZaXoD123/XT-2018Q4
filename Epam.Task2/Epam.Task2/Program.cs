@@ -2,14 +2,19 @@
 
 namespace Epam.Task2.Rectangle
 {
-    class Program
+    public class Program
     {
-        static void RectangleAreaSolve(int a, int b)
+        public static void RectangleAreaSolve(int a, int b)
         {
-            if (!((a > 0) && (b > 0))) throw new Exception("Wrong values!");
+            if (!((a > 0) && (b > 0)))
+            {
+                throw new Exception("Wrong values!");
+            }
+
             Console.WriteLine($"Reactangle area is {a*b}");
         }
-        static void Main()
+
+        public static void Main()
         {
             start:
             Console.WriteLine("Enter length and width of rectangle:");

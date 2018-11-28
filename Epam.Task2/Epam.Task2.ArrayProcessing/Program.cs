@@ -2,9 +2,9 @@
 
 namespace Epam.Task2.ArrayProcessing
 {
-    class Program 
+    public class Program 
     {
-        static void Sort<T>(T[] array, int start, int stop) where T: IComparable // Тип определяется разработчиком в этом смысле?
+        public static void Sort<T>(T[] array, int start, int stop) where T : IComparable
         {
             T temp;
             var left = start;
@@ -13,8 +13,16 @@ namespace Epam.Task2.ArrayProcessing
             
             while (left <= right)
             {
-                while (array[left].CompareTo(value) < 0) left++;
-                while (array[right].CompareTo(value) > 0) right--;
+                while (array[left].CompareTo(value) < 0)
+                {
+                    left++;
+                }
+
+                while (array[right].CompareTo(value) > 0)
+                {
+                    right--;
+                }
+
                 if (left <= right)
                 {
                     temp = array[left];
@@ -24,10 +32,19 @@ namespace Epam.Task2.ArrayProcessing
                     right--;
                 }
             }
-            if (right > start) Sort(array, start, right);
-            if (stop > left) Sort(array, left, stop);
+
+            if (right > start)
+            {
+                Sort(array, start, right);
+            }
+
+            if (stop > left)
+            {
+                Sort(array, left, stop);
+            }
         }
-        static (T, T) MaximumAndMinimumFind<T>(T[] array) where T : IComparable 
+
+        public static (T, T) MaximumAndMinimumFind<T>(T[] array) where T : IComparable 
         {
             T maximum = array[0];
             T minimum = array[0];
@@ -36,9 +53,11 @@ namespace Epam.Task2.ArrayProcessing
                 maximum = i.CompareTo(maximum) > 0 ? i : maximum;
                 minimum = i.CompareTo(minimum) < 0 ? i : minimum;
             }
+
             return (minimum, maximum);
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
             Console.WriteLine("Enter massive length:");
             int[] array = new int[int.Parse(Console.ReadLine())];
@@ -47,8 +66,9 @@ namespace Epam.Task2.ArrayProcessing
             {
                 array[i] = generator.Next(100);
             }
-            Console.WriteLine("Maximum is {0}{1}Minimum is {2}",MaximumAndMinimumFind(array).Item1,Environment.NewLine, MaximumAndMinimumFind(array).Item2);
-            Sort(array,0,array.Length-1);
+
+            Console.WriteLine("Maximum is {0}{1}Minimum is {2}", MaximumAndMinimumFind(array).Item1, Environment.NewLine, MaximumAndMinimumFind(array).Item2);
+            Sort(array, 0, array.Length - 1);
             foreach (var item in array)
             {
                 Console.Write($"{item} ");
