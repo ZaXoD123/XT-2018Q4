@@ -6,22 +6,25 @@ namespace Epam.Task3.Triangle
     {
         public Triangle(int a, int b, int c)
         {
-            if (!(a + b > c && b + c > a && a + c > b)) throw new Exception("Wrong values!");
-            LengthOfSides = (a, b, c);
+            if (!(a + b > c && b + c > a && a + c > b))
+            {
+                throw new Exception("Wrong values!");
+            }
+
+            this.LengthOfSides = (a, b, c);
         }
 
         private (int a, int b, int c) LengthOfSides { get; }
 
         public double GetTriangleArea()
         {
-            //Heron`s formula
-            var p = (LengthOfSides.a + LengthOfSides.b + LengthOfSides.c) / 2;
-            return Math.Sqrt(p * (p - LengthOfSides.a) * (p - LengthOfSides.b) * (p - LengthOfSides.c));
+            var p = (this.LengthOfSides.a + this.LengthOfSides.b + this.LengthOfSides.c) / 2;
+            return Math.Sqrt(p * (p - this.LengthOfSides.a) * (p - this.LengthOfSides.b) * (p - this.LengthOfSides.c));
         }
 
         public double GetPerimeter()
         {
-            return LengthOfSides.a + LengthOfSides.b + LengthOfSides.c;
+            return this.LengthOfSides.a + this.LengthOfSides.b + this.LengthOfSides.c;
         }
     }
 }

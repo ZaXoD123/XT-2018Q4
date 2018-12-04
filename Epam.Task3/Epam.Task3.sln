@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.User", "Epam.Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.MyString", "Epam.Task3.MyString\Epam.Task3.MyString.csproj", "{72FE3FCA-B962-46F4-AFB8-0AB85B055BCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.Employee", "Epam.Task3.Employee\Epam.Task3.Employee.csproj", "{084FAF8F-14D1-4987-9270-1D5E64E66A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.Ring", "Epam.Task3.Ring\Epam.Task3.Ring.csproj", "{E67FBF6D-15B3-4ABB-942D-C9E5EAACA19D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Task3.VectorGraphicsEditor", "Epam.Task3.VectorGraphicsEditor\Epam.Task3.VectorGraphicsEditor.csproj", "{C9BC3615-832F-4424-8162-DE83CC64B46E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{72FE3FCA-B962-46F4-AFB8-0AB85B055BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72FE3FCA-B962-46F4-AFB8-0AB85B055BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72FE3FCA-B962-46F4-AFB8-0AB85B055BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084FAF8F-14D1-4987-9270-1D5E64E66A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084FAF8F-14D1-4987-9270-1D5E64E66A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084FAF8F-14D1-4987-9270-1D5E64E66A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084FAF8F-14D1-4987-9270-1D5E64E66A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67FBF6D-15B3-4ABB-942D-C9E5EAACA19D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67FBF6D-15B3-4ABB-942D-C9E5EAACA19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67FBF6D-15B3-4ABB-942D-C9E5EAACA19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67FBF6D-15B3-4ABB-942D-C9E5EAACA19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9BC3615-832F-4424-8162-DE83CC64B46E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BC3615-832F-4424-8162-DE83CC64B46E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BC3615-832F-4424-8162-DE83CC64B46E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BC3615-832F-4424-8162-DE83CC64B46E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Epam.Task3.Round
+﻿namespace Epam.Task3.Round
 {
+    using System;
+
     internal class Program
     {
         private static void Main(string[] args)
@@ -9,7 +9,7 @@ namespace Epam.Task3.Round
             var testRound1 = new Round(10, 5, 5);
             Console.WriteLine($"Round area is: {testRound1.RoundArea}");
 
-            //Incorrect values test
+            // Incorrect values test
             try
             {
                 var testRound2 = new Round(-2, 0, 0);

@@ -1,46 +1,41 @@
-﻿using System;
-
-namespace Epam.Task3.MyString
+﻿namespace Epam.Task3.MyString
 {
+    using System;
+
     internal class MyString
     {
-        private readonly char[] @string;
+        private readonly char[] myStringArray;
 
         public MyString()
         {
         }
 
-        private MyString(int length)
-        {
-            @string = new char[length];
-        }
-
         public MyString(string alpha)
         {
-            @string = alpha.ToCharArray();
+            this.myStringArray = alpha.ToCharArray();
         }
 
-        public override string ToString()
+        private MyString(int length)
         {
-            return string.Concat(@string);
+            this.myStringArray = new char[length];
         }
 
         public static MyString operator +(MyString s1, MyString s2)
         {
-            var result = new MyString(s1.@string.Length + s2.@string.Length);
-            s1.@string.CopyTo(result.@string, 0);
-            s2.@string.CopyTo(result.@string, s1.@string.Length);
+            var result = new MyString(s1.myStringArray.Length + s2.myStringArray.Length);
+            s1.myStringArray.CopyTo(result.myStringArray, 0);
+            s2.myStringArray.CopyTo(result.myStringArray, s1.myStringArray.Length);
             return result;
         }
 
         public static bool operator ==(MyString s1, MyString s2)
         {
-            return s1.@string == s2.@string ? true : false;
+            return s1.myStringArray == s2.myStringArray ? true : false;
         }
 
         public static bool operator !=(MyString s1, MyString s2)
         {
-            return s1.@string != s2.@string ? true : false;
+            return s1.myStringArray != s2.myStringArray ? true : false;
         }
 
         public static explicit operator MyString(string str)
@@ -53,15 +48,21 @@ namespace Epam.Task3.MyString
             return str.ToString();
         }
 
+        public override string ToString()
+        {
+            return string.Concat(this.myStringArray);
+        }
+
         public int? FirstIndexOf(char letter)
         {
-            for (var i = 0; i < @string.Length; i++)
+            for (var i = 0; i < this.myStringArray.Length; i++)
             {
-                if (@string[i] == letter)
+                if (this.myStringArray[i] == letter)
                 {
                     return i;
                 }
             }
+
             return null;
         }
     }
