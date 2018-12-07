@@ -6,14 +6,14 @@ namespace Epam.Task3.Triangle
     {
         public static void Main(string[] args)
         {
-            var testRound1 = new Triangle(7, 5, 5);
-            Console.WriteLine($"Round area is: {testRound1.GetTriangleArea()}");
+            var testTriangle1 = new Triangle(7, 5, 5);
+            Console.WriteLine($"Round area is: {testTriangle1.GetTriangleArea()}");
 
             // Incorrect values test
             try
             {
-                var testRound2 = new Triangle(10, 5, 5);
-                Console.WriteLine(testRound2.GetTriangleArea());
+                var testTriangle2 = new Triangle(10, 5, 5);
+                Console.WriteLine(testTriangle2.GetTriangleArea());
             }
             catch (Exception exception)
             {

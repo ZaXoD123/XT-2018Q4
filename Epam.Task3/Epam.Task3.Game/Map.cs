@@ -2,8 +2,8 @@
 {
     public abstract class Map
     {
-        private IPlayer player;
-        private IGameObject[,] desk;
+        private readonly IPlayer player;
+        private readonly IGameObject[,] desk;
 
         public Map(uint monstersPercent = 30, uint bonusPercent = 20, uint length = 10)
         {
