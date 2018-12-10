@@ -43,8 +43,11 @@ namespace Epam.Task4.WordFrequency
             }
 
             GetWordsCount(a, input);
-            
-            foreach (var item in a.Keys) Console.WriteLine($"{item} {a[item]}");
+
+            foreach (var item in a.Keys)
+            {
+                Console.WriteLine($"{item} {a[item]}");
+            }
         }
     }
 }

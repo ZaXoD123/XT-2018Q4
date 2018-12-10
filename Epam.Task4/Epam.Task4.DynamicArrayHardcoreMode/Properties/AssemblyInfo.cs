@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Epam.Task4.WordFrequency")]
+[assembly: AssemblyTitle("Epam.Task4.DynamicArrayHardcoreMode")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Epam.Task4.WordFrequency")]
+[assembly: AssemblyProduct("Epam.Task4.DynamicArrayHardcoreMode")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("89b40891-20cc-42dd-afe5-def584cd910b")]
+[assembly: Guid("e0483979-9307-4c28-a291-c51d0e841084")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
