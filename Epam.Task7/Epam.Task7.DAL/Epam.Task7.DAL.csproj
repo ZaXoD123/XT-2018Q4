@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwardsDao.cs" />
+    <Compile Include="FakeDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDao.cs" />
   </ItemGroup>

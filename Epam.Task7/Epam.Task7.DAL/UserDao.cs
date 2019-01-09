@@ -31,6 +31,7 @@ namespace Epam.Task7.DAL
 
         public void Save()
         {
+            _defaultDataFile.Close();
             _defaultDataFile = new FileStream("data.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             _binaryFormatter.Serialize(_defaultDataFile, _users);
         }
@@ -40,8 +41,10 @@ namespace Epam.Task7.DAL
             aUser.Id = (_users.Count != 0) ? _users.Keys.Max() + 1 : 1;
             _users.Add(aUser.Id, aUser);
         }
-
+        
         public bool Remove(uint id) => _users.Remove(id);
+
+        public User GetById(uint id) => _users[id];
 
         public bool Update(User aUser)
         {

@@ -9,6 +9,7 @@ namespace Epam.Task7.DAL
         void Add(User aUser);
         bool Remove(uint id);
         bool Update(User aUser);
+        User GetById(uint id);
         IEnumerable<User> Show();
     }
 }

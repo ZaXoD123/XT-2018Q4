@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Epam.Task7.Entities;
 using Epam.Task7.DAL;
 
@@ -13,12 +14,29 @@ namespace Epam.Task7.BLL
         
         public void Add(User aUser) => _userDao.Add(aUser);
         
-
         public void Remove(uint id) => _userDao.Remove(id);
         
-
         public void Update(User aUser) => _userDao.Update(aUser);
-        
+
+        public User GetById(uint id) => _userDao.GetById(id);
+
+        public void AddAward(uint userId, uint awardId, IAwardsLogic awardsLogic)
+        {
+            var temp = _userDao.GetById(userId).Awards;
+            try
+            {
+                awardsLogic.GetById(awardId);
+                if (!temp.Contains(awardId))
+            {
+                _userDao.GetById(userId).Awards.Add(awardId);
+            }
+            }
+            catch 
+            {
+                throw new Exception("Award is not exist");
+            }
+            
+        }
 
         public void Exit() => _userDao.Save();
         
