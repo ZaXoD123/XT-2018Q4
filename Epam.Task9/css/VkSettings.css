@@ -1,0 +1,28 @@
+body
+{
+    background-color: #edeef0;
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    position: absolute;
+    width: 100%;
+    background: #4a76a8;
+    height: 42px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #4872a3;
+
+}
+.headerInner
+{
+    display: block;
+    width: 980px;
+    vertical-align: center;
+    align-content: center;
+    margin: auto;
+}
+.headerInner img
+{
+    margin: 11px 10px 0 0;
+}
