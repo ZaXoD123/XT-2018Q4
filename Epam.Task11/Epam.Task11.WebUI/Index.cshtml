@@ -1,0 +1,53 @@
+﻿@using PLMain;
+@{
+    Layout = null;
+}
+
+@using PLMain
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td style="vertical-align: top; padding-right: 50px;">
+                    @RenderPage("~/some/Add.cshtml");
+                    @RenderPage("~/some/AddAward.cshtml");
+                    @RenderPage("~/some/AddAwardForUser.cshtml");
+                    @RenderPage("~/some/Update.cshtml");
+                    @RenderPage("~/some/Delete.cshtml");
+                    @RenderPage("~/some/DeleteAward.cshtml");
+                    @RenderPage("~/some/ImageUpload.cshtml");
+                </td>
+                <td style="vertical-align: top">
+                    <h1>Пользователи</h1>
+                    @{
+                        foreach (var item in WebPL.Show())
+                        {
+                            <text><img src="@item.Item1" style="display: inline-block; width: 20px; height: 20px"><pre style="display: inline-block; font-size: 16px;">@item.Item2</pre></text>
+                            <br/>
+                        }
+                    }
+                    <h1>Награды</h1>
+                    @{
+                        foreach (var item in WebPL.ShowAwards())
+                        {
+                            <text><img src="@item.Item1" style="display: inline-block; width: 20px; height: 20px"><pre  style="display: inline-block; font-size: 16px;">@item.Item2</pre></text>
+                        }
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@using PLMain
+@{
+    Layout = null;
+}
+@{
+    if (IsPost)
+    {
+        var a = Request["UserID"];
+        var b = Request["AwardID"];
+        if (!string.IsNullOrEmpty(a) & !string.IsNullOrEmpty(b))
+        {
+            WebPL.AddAwardForUser(uint.Parse(a), uint.Parse(b));
+        }
+    }
+    <h1>Добавить пользователю награду (id user, id award)</h1>
+    <form action="/Index.cshtml" method="post">
+        <input type="text" name="UserID">
+        <input type="text" name="AwardID">
+        <button type="submit">Submit</button>
+    </form>
+
+}

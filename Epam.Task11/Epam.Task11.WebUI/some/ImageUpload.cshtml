@@ -1,0 +1,75 @@
+﻿@using Epam.Task7.BLL
+@using Epam.Task7.Entities
+@using PLMain
+@{
+    Layout = null;
+}
+
+<script>
+    var data;
+
+    function previewFile() {
+        var preview = document.querySelector('img');
+        var file = document.querySelector('input[type=file]').files[0];
+        var z = document.getElementById("content");
+        var reader  = new FileReader();
+                
+        reader.onloadend = function () {
+            preview.src = reader.result;
+            data = reader.result;
+            z.value = data;
+        }
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+        
+        
+    }
+
+</script>
+@{
+
+    if (IsPost)
+    {
+        var dat = Request["content"];
+        var us = Request["213"];
+        var choise = Request["Choise"];
+
+        if ((us != null) & (dat != null)& (choise!=null))
+        {
+            try
+            {
+                if (choise == "user")
+                {
+                    WebPL.GetUserById(uint.Parse(us)).Avatar.Data = dat;
+                }
+                if (choise == "award")
+                {
+                    WebPL.GetAwardById(uint.Parse(us)).Avatar.Data = dat;
+                }
+                WebPL.Save();
+            }
+            catch (Exception e)
+            {
+                <script>alert("Некорректные данные");</script>
+            }
+
+        }
+
+
+    }
+    <h1>Добавить картинку (Image, Some id)</h1>
+    <form action="/Index.cshtml" method="post" enctype="multipart/form-data">
+        <img id="imgprev" name="imgprev" style="max-height: 200px"><br />
+        <input type="file" name="img" accept="image/*" id="img" onchange="previewFile()">
+        <input type="radio" value="user" name="Choise" checked="true" />
+        <p style="display: inline-block">Пользователь</p>
+        <input type="radio" value="award" name="Choise" />
+        <p style="display: inline-block">Награда</p>
+        <input type="text" name="213">
+        <input type="text" id="content" name="content" style="position: absolute; display: none;">
+        <button type="submit" id="btn">Submit</button>
+    </form>
+}

@@ -1,0 +1,24 @@
+﻿@using PLMain
+@{
+    Layout = null;
+}
+@{
+    if (IsPost)
+    {
+        var a = Request["IDUpdate"];
+        var b = Request["NameUpdate"];
+        var c = Request["DateUpdate"];
+        if (!string.IsNullOrEmpty(a) & !string.IsNullOrEmpty(b) & !string.IsNullOrEmpty(c))
+        {
+            WebPL.UserUpdate(uint.Parse(a), b, DateTime.Parse(c));
+        }
+    }
+    <h1>Изменить пользователя (id, Имя, Дата)</h1>
+    <form action="/Index.cshtml" method="post">
+        <input type="text" name="IDUpdate">
+        <input type="text" name="NameUpdate">
+        <input type="text" name="DateUpdate">
+        <button type="submit">Submit</button>
+    </form>
+
+}

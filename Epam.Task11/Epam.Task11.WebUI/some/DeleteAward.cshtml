@@ -1,0 +1,21 @@
+﻿@using PLMain
+
+@{
+    Layout = null;
+}
+
+@{
+    if (IsPost)
+    {
+        var a = Request["IDDeleteAward"];
+        if (!string.IsNullOrEmpty(a))
+        {
+            WebPL.DeleteAward(uint.Parse(a));
+        }
+    }
+    <h1>Удалить награду (id)</h1>
+    <form action="/Index.cshtml" method="post">
+        <input type="text" name="IDDeleteAward">
+        <button type="submit">Submit</button>
+    </form>
+}

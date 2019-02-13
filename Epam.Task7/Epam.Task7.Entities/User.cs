@@ -11,6 +11,7 @@ namespace Epam.Task7.Entities
         public uint Id { get; set; }
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public Image Avatar { get; set; } = new Image();
         public List<uint> Awards { get; set; } = new List<uint>();
 
         public override string ToString() =>$"{Id} {Name} {DateOfBirth.DayOfYear} {(int)((DateTime.Today - DateOfBirth).TotalDays / 364)}";

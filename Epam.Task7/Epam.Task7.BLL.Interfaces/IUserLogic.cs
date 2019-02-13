@@ -8,6 +8,7 @@ namespace Epam.Task7.BLL
         void Add(User aUser);
         void Remove(uint id);
         void Update(User aUser);
+        void DeleteAward(uint award, uint userId);
         void Exit();
         void AddAward(uint userId, uint awardId, IAwardsLogic awardsLogic);
         User GetById(uint id);

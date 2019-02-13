@@ -11,6 +11,7 @@ namespace Epam.Task7.Entities
     {
         public uint Id { get; set; }
         public string Title { get; set; }
+        public Image Avatar { get; set; } = new Image();
 
         public override string ToString() => $"{Id} {Title}";
     }

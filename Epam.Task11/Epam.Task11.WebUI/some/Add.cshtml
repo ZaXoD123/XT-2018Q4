@@ -1,0 +1,22 @@
+﻿@using PLMain
+@{
+    Layout = null;
+}
+@{
+    if (IsPost)
+    {
+        var a = Request["Name"];
+        var b = Request["Date"];
+        if (!string.IsNullOrEmpty(a)&!string.IsNullOrEmpty(b))
+        {
+            WebPL.Add(a, DateTime.Parse(b));
+        }
+    }
+    <h1>Добавить пользователя (Имя, Дата)</h1>
+    <form action="/Index.cshtml" method="post">
+        <input type="text" name="Name">
+        <input type="text" name="Date">
+        <button type="submit">Submit</button>
+    </form>
+
+}

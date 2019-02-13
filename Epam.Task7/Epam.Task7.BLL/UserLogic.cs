@@ -18,6 +18,19 @@ namespace Epam.Task7.BLL
         
         public void Update(User aUser) => _userDao.Update(aUser);
 
+        public void DeleteAward(uint awardId, uint userId)
+        {
+            try
+            {
+                GetById(userId).Awards.Remove(awardId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            
+        }
+
         public User GetById(uint id) => _userDao.GetById(id);
 
         public void AddAward(uint userId, uint awardId, IAwardsLogic awardsLogic)

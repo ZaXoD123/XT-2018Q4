@@ -30,6 +30,7 @@ namespace Epam.Task7.DAL
 
         public void Save()
         {
+            _defaultDataFile.Close();
             _defaultDataFile = new FileStream("data.datawards", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             _binaryFormatter.Serialize(_defaultDataFile, _award);
         }
